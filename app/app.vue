@@ -194,12 +194,12 @@ h1 {
   text-shadow: 0 0 8px var(--cyan), 0 0 24px rgba(0,240,255,.4);
 }
 .glitch::before, .glitch::after {
-  content: attr(data-text); position: absolute; inset: 0; opacity: .8;
+  content: attr(data-text); position: absolute; inset: 0; opacity: 0;
 }
 .glitch::before { color: var(--magenta); animation: g1 3s infinite linear alternate-reverse; clip-path: inset(0 0 60% 0); }
 .glitch::after { color: var(--yellow); animation: g2 2.5s infinite linear alternate-reverse; clip-path: inset(60% 0 0 0); }
-@keyframes g1 { 0%,90%,100% { transform: none; } 92% { transform: translate(-3px,-1px); } 96% { transform: translate(3px,1px); } }
-@keyframes g2 { 0%,88%,100% { transform: none; } 90% { transform: translate(3px,1px); } 94% { transform: translate(-3px,-2px); } }
+@keyframes g1 { 0%,90%,100% { transform: none; opacity: 0; } 92% { transform: translate(-3px,-1px); opacity: .9; } 96% { transform: translate(3px,1px); opacity: .9; } }
+@keyframes g2 { 0%,88%,100% { transform: none; opacity: 0; } 90% { transform: translate(3px,1px); opacity: .9; } 94% { transform: translate(-3px,-2px); opacity: .9; } }
 
 .sub { color: var(--dim); margin: 8px 0 32px; }
 
